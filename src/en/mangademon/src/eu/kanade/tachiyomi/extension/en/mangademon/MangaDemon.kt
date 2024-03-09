@@ -30,6 +30,7 @@ class MangaDemon : ParsedHttpSource() {
     override val name = "Manga Demon"
     override val baseUrl = "https://demonreader.org"
 
+    
     override val client = network.cloudflareClient.newBuilder()
         .rateLimit(1)
         .addInterceptor { chain ->
