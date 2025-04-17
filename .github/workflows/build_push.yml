@@ -1,4 +1,7 @@
 name: CI
+name: Actions Runner Controller Demo
+on:
+  workflow_dispatch:
 
 on:
   push:
@@ -9,7 +12,7 @@ on:
       - '!**.md'
       - '!.github/**'
       - '.github/scripts/**'
-      - '.github/workflows/build_push.yml'
+      - '!.github/workflows/build_push.yml'
 
 concurrency:
   group: ${{ github.workflow }}
@@ -20,6 +23,7 @@ env:
   IS_PR_CHECK: false
 
 jobs:
+  runs-on: github-runner
   prepare:
     name: Prepare job
     runs-on: 'ubuntu-24.04'
