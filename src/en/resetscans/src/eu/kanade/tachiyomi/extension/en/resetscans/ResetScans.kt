@@ -11,7 +11,7 @@ class ResetScans : Madara(
     dateFormat = SimpleDateFormat("MMM dd", Locale.US),
 ) {
     // Moved from FuzzyDoodle to Madara
-    override val versionId = 3
+    override val versionId = 4
 
     override val useNewChapterEndpoint = true
 
