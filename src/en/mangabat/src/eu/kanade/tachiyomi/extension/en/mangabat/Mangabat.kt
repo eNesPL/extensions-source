@@ -12,7 +12,7 @@ class Mangabat : MangaBox(
     "en",
 ) {
     override fun mangaDetailsRequest(manga: SManga): Request {
-        if (manga.url.contains("mangabat.com/")) {
+        if (manga.url.contains("mangabats.com/")) {
             throw Exception(MIGRATE_MESSAGE)
         }
         return super.mangaDetailsRequest(manga)
