@@ -6,12 +6,12 @@ import java.util.Locale
 
 class ResetScans : Madara(
     "Reset Scans",
-    "https://rspro.xyz",
+    "https://reset-scans.org",
     "en",
     dateFormat = SimpleDateFormat("MMM dd", Locale.US),
 ) {
     // Moved from FuzzyDoodle to Madara
-    override val versionId = 4
+    override val versionId = 5
 
     override val useNewChapterEndpoint = true
 
